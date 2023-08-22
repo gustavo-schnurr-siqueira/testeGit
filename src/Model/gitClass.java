@@ -5,10 +5,10 @@
  */
 package Model;
 
-/**
- *
- * @author 311100469
- */
+
 public class gitClass {
+    private int id;
+    private String nome;
+    private boolean ligado;    
     
 }
