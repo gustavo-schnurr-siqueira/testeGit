@@ -46,8 +46,6 @@ public class guiLista extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         excluirProdutoBut = new javax.swing.JToggleButton();
         addProdutoBut = new javax.swing.JToggleButton();
-        codProdutoTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelaLista = new javax.swing.JTable();
@@ -55,6 +53,9 @@ public class guiLista extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(768, 800));
+        setResizable(false);
+        setSize(new java.awt.Dimension(765, 760));
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -86,7 +87,7 @@ public class guiLista extends javax.swing.JFrame {
         });
 
         excluirProdutoBut.setBackground(new java.awt.Color(204, 255, 204));
-        excluirProdutoBut.setFont(new java.awt.Font("Tw Cen MT", 0, 36)); // NOI18N
+        excluirProdutoBut.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
         excluirProdutoBut.setText("Excluir Produto");
         excluirProdutoBut.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         excluirProdutoBut.addActionListener(new java.awt.event.ActionListener() {
@@ -105,17 +106,6 @@ public class guiLista extends javax.swing.JFrame {
             }
         });
 
-        codProdutoTextField.setFont(new java.awt.Font("Tw Cen MT", 0, 18)); // NOI18N
-        codProdutoTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        codProdutoTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                codProdutoTextFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT", 0, 24)); // NOI18N
-        jLabel4.setText("cod. prod.");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -125,22 +115,18 @@ public class guiLista extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nomeProdutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(qntdProdutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
             .addComponent(jSeparator2)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(addProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(addProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(excluirProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(codProdutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addGap(26, 26, 26))
+                .addComponent(excluirProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,13 +140,11 @@ public class guiLista extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(codProdutoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
-                    .addComponent(excluirProdutoBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(addProdutoBut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(11, 11, 11)
+                        .addComponent(excluirProdutoBut, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -244,15 +228,15 @@ public class guiLista extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(143, 143, 143)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(144, 144, 144))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -260,7 +244,7 @@ public class guiLista extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -288,7 +272,15 @@ public class guiLista extends javax.swing.JFrame {
     }//GEN-LAST:event_qntdProdutoTextFieldActionPerformed
 
     private void excluirProdutoButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_excluirProdutoButActionPerformed
-        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel) tabelaLista.getModel();
+        int linhaSelecionada = tabelaLista.getSelectedRow();
+        
+        if(linhaSelecionada != -1){
+            model.removeRow(linhaSelecionada);            
+        }else{
+            JOptionPane.showMessageDialog(null,"Selecione um item da tabela!","AVISO",JOptionPane.WARNING_MESSAGE);
+        }
+        id--;
     }//GEN-LAST:event_excluirProdutoButActionPerformed
 
     private void addProdutoButActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProdutoButActionPerformed
@@ -300,9 +292,9 @@ public class guiLista extends javax.swing.JFrame {
         sucesso = cont.validar(quantidade);
         sQuantidade = qntdProdutoTextField.getText();
         
-        if (sucesso!=true){
+        if (sucesso!=true || quantidade <=0){
             
-            JOptionPane.showMessageDialog(null,"quantidade inválida");
+            JOptionPane.showMessageDialog(null,"Insira a quantidade de itens desejados.", "AVISO!",JOptionPane.WARNING_MESSAGE);
             
 
         }else{
@@ -327,10 +319,6 @@ public class guiLista extends javax.swing.JFrame {
         }        
         
     }//GEN-LAST:event_addProdutoButActionPerformed
-
-    private void codProdutoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codProdutoTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_codProdutoTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,12 +357,10 @@ public class guiLista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton addProdutoBut;
-    private javax.swing.JTextField codProdutoTextField;
     private javax.swing.JToggleButton excluirProdutoBut;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
